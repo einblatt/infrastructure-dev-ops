@@ -3,7 +3,7 @@ set -e
 
 USER="modifyapp"
 HOME_DIR="/usr/local/docker/nginx/app"
-PASSWORD="@linux..110"
+PASSWORD="linux"
 
 echo "正在创建用户 $USER ..."
 useradd -m -d "$HOME_DIR" -s /bin/bash "$USER"
