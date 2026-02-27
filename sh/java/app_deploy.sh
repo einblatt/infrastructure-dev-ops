@@ -7,7 +7,7 @@ SPRING_PROFILE="-Dspring.profiles.active=prod"
 APP_NAME="xxx.jar"
 
 #jvm params
-JVM="-Xms1024m -Xmx8g"
+JVM="-Xms3g -Xmx3g -XX:+UseG1GC -XX:MaxGCPauseMillis=200"
 
 #app log
 LOG_FILE="/usr/local/java/app/fundplate/fundplate-business-$(date +%Y-%m-%d).log"
