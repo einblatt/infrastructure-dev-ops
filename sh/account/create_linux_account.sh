@@ -5,7 +5,7 @@ USER="modifyapp"
 HOME_DIR="/usr/local/docker/nginx/app"
 PASSWORD="linux"
 
-userdel modifyapp
+id modifyapp &>/dev/null && userdel modifyapp
 useradd -m -d "$HOME_DIR" -s /bin/bash "$USER"
 echo "$USER:$PASSWORD" | chpasswd
 chown -R $USER:$USER $HOME_DIR
