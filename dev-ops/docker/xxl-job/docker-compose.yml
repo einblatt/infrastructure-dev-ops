@@ -6,6 +6,7 @@ services:
     container_name: xxl-job-admin
     environment:
       PARAMS: '--spring.datasource.url=jdbc:mysql://IP:PORT/xxl_job?Unicode=true&characterEncoding=UTF-8 --spring.datasource.username=xxx --spring.datasource.password=xxx --xxl.job.accessToken=xxx'
+    #network_mode: host //数据库使用域名时如果无法连接,请使用此配置
     ports:
       - 9001:8080
     volumes:

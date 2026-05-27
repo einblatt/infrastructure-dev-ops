@@ -12,8 +12,13 @@
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+# Getting Started
 
+## 一键自动部署
+运行 `./deploy.sh`命令会完成完整基础服务的配置
+
+
+## 手动部署
 请按照以下步骤完成基础服务的通用部署
 
 ### 1. 安装Docker 
