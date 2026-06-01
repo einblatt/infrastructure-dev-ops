@@ -50,7 +50,7 @@ for i in "${!DOMAINS[@]}"; do
     ~/.acme.sh/acme.sh --install-cert -d "$DOMAIN" \
         --key-file "$CERT_DIR/$DOMAIN.key" \
         --fullchain-file "$CERT_DIR/$DOMAIN.crt" \
-        --reloadcmd "docker restart nginx"
+        --reloadcmd "docker exec nginx nginx -s reload"
     echo "✅ 证书安装完成：$DOMAIN"
 
     # 最后一个域名不需要等待
