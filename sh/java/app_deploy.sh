@@ -106,4 +106,14 @@ case "$1" in
         usage
     ;;
 esac
+
+# 当前脚本所在目录
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# 记录文件
+LAST_RUN_FILE="${SCRIPT_DIR}/LAST_RUN.txt"
+
+# 追加记录最后一次执行时间
+echo "${APP_NAME} 最后一次执行时间: $(date '+%Y-%m-%d %H:%M:%S')" >> "${LAST_RUN_FILE}"
+
 exit 0
