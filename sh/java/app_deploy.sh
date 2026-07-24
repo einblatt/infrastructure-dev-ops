@@ -107,6 +107,10 @@ case "$1" in
     ;;
 esac
 
+#服务备份
+rm -f  backup.jar
+cp -r "${APP_NAME}" backup.jar
+
 # 当前脚本所在目录
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
