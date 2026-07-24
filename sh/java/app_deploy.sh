@@ -114,6 +114,6 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LAST_RUN_FILE="${SCRIPT_DIR}/LAST_RUN.txt"
 
 # 追加记录最后一次执行时间
-echo "${APP_NAME} 最后一次执行时间: $(date '+%Y-%m-%d %H:%M:%S')" >> "${LAST_RUN_FILE}"
+echo "${APP_NAME} 最近一次执行时间: $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S') Asia/Shanghai UTC+08:00" >> "${LAST_RUN_FILE}"
 
 exit 0
